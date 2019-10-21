@@ -300,6 +300,7 @@ AnimatedGIF.prototype = {
       try {
           ctx.filter = filter;
 
+          ctx.clearRect(0, 0, width, height);
           ctx.drawImage(element, 0, 0, width, height);
 
           if (textToUse) {

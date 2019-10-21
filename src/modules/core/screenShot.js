@@ -96,6 +96,7 @@ const screenShot = {
 
                     context.filter = filter;
 
+                    context.clearRect(sourceX, sourceY, sourceWidth, sourceHeight);
                     context.drawImage(videoElement, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, gifWidth, gifHeight);
 
                     finishCapture();
