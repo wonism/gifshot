@@ -1825,6 +1825,7 @@ AnimatedGIF.prototype = {
         try {
             ctx.filter = filter;
 
+            ctx.clearRect(0, 0, width, height);
             ctx.drawImage(element, 0, 0, width, height);
 
             if (textToUse) {
@@ -2138,6 +2139,7 @@ var screenShot = {
 
                     context.filter = filter;
 
+                    context.clearRect(sourceX, sourceY, sourceWidth, sourceHeight);
                     context.drawImage(videoElement, sourceX, sourceY, sourceWidth, sourceHeight, 0, 0, gifWidth, gifHeight);
 
                     finishCapture();
